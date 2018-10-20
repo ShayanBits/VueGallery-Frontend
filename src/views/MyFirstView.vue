@@ -16,13 +16,16 @@
             you may get a (small) discount. If you are interested, <a href="mailto:otto@example.org">send me an email</a>.
         </p>
     </div>
+    <Footer/>
 </div>
 
 </template>
 
 <script>
+    import Footer from "../components/Footer";
     export default {
         name: "MyFirstView",
+        components: {Footer},
         // props:{
         //     welcomeMsg : String
         // }
