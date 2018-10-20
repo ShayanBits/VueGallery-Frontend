@@ -23,7 +23,21 @@ export default new Router({
             path: '/firstVueComponent',
             name: 'firstCo',
             component: () => import(/* webpackChunkName: "about" */ './views/MyFirstView.vue')
-
+        },
+        {
+            path: '/gallery',
+            name: 'gallery',
+            component: () => import(/* webpackChunkName: "about" */ './views/Gallery.vue')
+        },
+        {
+            path: '/blog',
+            name: 'blog',
+            component: () => import(/* webpackChunkName: "about" */ './views/Blog.vue')
+        },
+        {
+            path: '/newsletter',
+            name: 'newsletter',
+            component: () => import(/* webpackChunkName: "about" */ './views/Newsletter.vue')
         }
 
     ]
