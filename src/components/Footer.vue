@@ -1,16 +1,13 @@
 <template>
     <footer>
-        <SocialNetworksIcons></SocialNetworksIcons>
         <div>© 2018 LOGO</div>
     </footer>
 </template>
 
 <script>
-    import SocialNetworksIcons from "./SocialNetworksIcons";
 
     export default {
         name: "Footer",
-        components: {SocialNetworksIcons}
     }
 </script>
 
