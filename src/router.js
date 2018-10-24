@@ -38,6 +38,11 @@ export default new Router({
             path: '/newsletter',
             name: 'newsletter',
             component: () => import(/* webpackChunkName: "about" */ './views/Newsletter.vue')
+        },
+        {
+            path: '/slideshow',
+            name: 'slideshow',
+            component: () => import(/* webpackChunkName: "about" */ './views/Slideshow.vue')
         }
 
     ]

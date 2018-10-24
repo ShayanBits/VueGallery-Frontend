@@ -3,10 +3,7 @@
         <div id="nav">
             <ul class="navmenu">
                 <li>
-                    <router-link to="/">Home</router-link>
-                </li>
-                <li>
-                    <router-link to="/about">About</router-link>
+                    <router-link to="/about">Home</router-link>
                 </li>
                 <li>
                     <router-link to="/gallery">Gallery</router-link>
@@ -16,9 +13,6 @@
                 </li>
                 <li>
                     <router-link to="/newsletter">Newsletter</router-link>
-                </li>
-                <li>
-                    <router-link to="/firstVueComponent">Test page</router-link>
                 </li>
             </ul>
         </div>
