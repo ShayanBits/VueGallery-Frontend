@@ -1,10 +1,12 @@
 <template>
-
+    <picture-container></picture-container>
 </template>
 
 <script>
+    import PictureContainer from "../components/PictureContainer";
     export default {
-        name: "Gallery"
+        name: "Gallery",
+        components: {PictureContainer}
     }
 </script>
 

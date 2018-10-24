@@ -6,7 +6,6 @@
 </template>
 
 <script>
-    import MyFirstView from "./MyFirstView";
     import Footer from "../components/Footer";
     export default {
         components: {Footer, MyFirstView}
