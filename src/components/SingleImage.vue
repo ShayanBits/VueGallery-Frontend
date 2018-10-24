@@ -10,7 +10,6 @@
             imagePath: String,
             imageName: String,
             altName: String,
-
         }
     }
 </script>

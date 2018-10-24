@@ -1,33 +1,70 @@
 <template>
-    <div class="image">
-        <img v-for="image in images" :src="picBasePath + image.name " :alt="image.name">
+    <div id="galleryPage">
+        <div v-for="image in images" class="responsive">
+            <figure class="gallery"><img :src="picBasePath +image.name + '.jpg' " :alt="image.name">
+                <figcaption class="desc">{{image.name}}</figcaption>
+            </figure>
+        </div>
     </div>
 </template>
 
 <script>
-    let picBasePathVar = "src/assets/images/";
-    let imageList = [{'name': 'butterfly.jpg'},
-        {'name': 'ducks.jpg'},
-        {'name': 'fire.jpg'},
-        {'name': 'kings_canyon.jpg'},
-        {'name': 'koalas.jpg'},
-        {'name': 'pink_flower.jpg'},
-        {'name': 'stairs.jpg'},
-        {'name': 'uluru.jpg'},
-        {'name': 'yellow_flower.jpg'},
+    import SingleImage from "./SingleImage";
+
+    let picBasePathVar = "/images/";
+    let imageList = [{'name': 'butterfly'},
+        {'name': 'ducks'},
+        {'name': 'fire'},
+        {'name': 'kings_canyon'},
+        {'name': 'koalas'},
+        {'name': 'pink_flower'},
+        {'name': 'stairs'},
+        {'name': 'uluru'},
+        {'name': 'yellow_flower'},
     ];
     export default {
         name: "PictureContainer",
-        components: {},
-        props: {
-            picBasePath: picBasePathVar,
-            images: imageList,
-        }
+        data() {
+            return {
+                picBasePath: picBasePathVar,
+                images: imageList,
+            }
+        },
+        components: {SingleImage}
     }
 
 
 </script>
 
 <style scoped>
+
+    figure.gallery {
+        border: 1px solid #ccc;
+        margin: 3px;
+    }
+
+    figure.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption.desc {
+        padding: 15px;
+        text-align: center;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .picContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .responsive {
+        padding: 0 6px;
+        width: 33.0%;
+    }
 
 </style>
