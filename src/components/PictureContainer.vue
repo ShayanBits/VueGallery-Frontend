@@ -1,9 +1,11 @@
 <template>
     <div id="galleryPage">
-        <div v-for="image in images" class="responsive">
-            <figure class="gallery"><img :src="picBasePath +image.name + '.jpg' " :alt="image.name">
-                <figcaption class="desc">{{image.name}}</figcaption>
-            </figure>
+        <div class="picContainer">
+            <div v-for="image in images" class="responsive">
+                <figure class="gallery"><img :src="picBasePath +image.name + '.jpg' " :alt="image.name">
+                    <figcaption class="desc">{{image.name}}</figcaption>
+                </figure>
+            </div>
         </div>
     </div>
 </template>
@@ -57,14 +59,26 @@
         box-sizing: border-box;
     }
 
-    .picContainer {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .responsive {
         padding: 0 6px;
         width: 33.0%;
     }
 
+    .picContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .responsive {
+            width: 100%;
+        }
+    }
 </style>
